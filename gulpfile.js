@@ -50,7 +50,7 @@ gulp.task('watch', function () {
 
 //Remove unnecessary CSS
 gulp.task('clean', ['sass'], function () {
-  return gulp.src(['./css/components', './css/common'], {read: false})
+  return gulp.src(['./css/*', '!./css/style.css'], {read: false})
     .pipe(clean(({force: true})));
 });
 
