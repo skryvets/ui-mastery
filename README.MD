@@ -3,7 +3,7 @@
 * Index.html with predefined basic tags
 * SCSS with empty tags defined in HTML
 * Two additional predefined SCSS files like reset.scss and common.scss for appropriate goals.
-* Js folder with JQuery and Bootstrap javascript files inside and of course with our future custom JS that should be added into js/src folder.
+* Js folder with JQuery and future javascript files that should be added into js/src folder.
 
 ###Folder Structure
 ```
