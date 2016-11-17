@@ -33,7 +33,7 @@
 
 ###How to install
 * Download or clone this repo.
-* Being in the folder run ```npm install``` in order to install gulp and its dependencies
+* Being in the folder run ```npm install``` in order to install gulp and its plugins
 * In order to start server write `````gulp`````
 
 ###How to use
