@@ -38,5 +38,5 @@
 
 ###How to use
 * Local WebServer is accessible via address ```http://localhost:8080/```
-* SCSS styles should be putted inside ```scss``` folder
-* JS files should be putted into ```js/src``` folder
+* SCSS styles should be inside ```/scss``` folder. Then you can import any scss into main ```styles.scss``` file
+* JS files should be inside ```/js/src``` folder
