@@ -4,6 +4,7 @@
 * SCSS with empty tags defined in HTML
 * Two additional predefined SCSS files like reset.scss and common.scss for appropriate goals.
 * Js folder with JQuery and future javascript files that should be added into js/src folder.
+* Javascript ES5 support only.
 
 ###Folder Structure
 ```
