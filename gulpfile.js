@@ -8,7 +8,8 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 
-gulp.task('default', function () {});
+gulp.task('default', function () {
+});
 
 //Init server and connect
 gulp.task('connect', function () {
@@ -21,26 +22,27 @@ gulp.task('connect', function () {
 //Reload on any HTML changes
 gulp.task('reload', function () {
 	gulp.src('./*.html')
-		.pipe(connect.reload());
+	.pipe(connect.reload());
+	
 });
 
 //Compile, minify SCSS and reload
 gulp.task('sass', function () {
 	return gulp.src('./scss/**/*.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./css'))
-		.pipe(connect.reload());
+	.pipe(sourcemaps.init())
+	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	.pipe(sourcemaps.write())
+	.pipe(gulp.dest('./css'))
+	.pipe(connect.reload());
 });
 
 //Concat, Minify JS and reload
 gulp.task('js', function () {
 	return gulp.src('./js/src/*.js')
-		.pipe(concat('all.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('./js/'))
-		.pipe(connect.reload());
+	.pipe(concat('all.min.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest('./js/'))
+	.pipe(connect.reload());
 });
 
 //Gulp Watcher
@@ -53,7 +55,7 @@ gulp.task('watch', function () {
 //Remove unnecessary CSS
 gulp.task('clean', ['sass'], function () {
 	return gulp.src(['./css/*', '!./css/style.css'], {read: false})
-		.pipe(clean(({force: true})));
+	.pipe(clean(({force: true})));
 });
 
 gulp.task('default', ['connect', 'watch', 'clean']);
