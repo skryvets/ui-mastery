@@ -58,4 +58,18 @@ gulp.task('clean', ['sass'], function () {
 	.pipe(clean(({force: true})));
 });
 
+
+//Production Compilation, without source maps
+gulp.task('prod-sass', function () {
+	return gulp.src('./scss/**/*.scss')
+	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	.pipe(gulp.dest('./css'))
+});
+
+gulp.task('prod', ['prod-sass'], function () {
+	return gulp.src(['./css/*', '!./css/style.css'], {read: false})
+	.pipe(clean(({force: true})));
+});
+
+//Default Task
 gulp.task('default', ['connect', 'watch', 'clean']);
