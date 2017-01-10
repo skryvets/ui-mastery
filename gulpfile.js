@@ -26,50 +26,48 @@ gulp.task('reload', function () {
 	
 });
 
-//Compile, minify SCSS and reload
+//Compile SCSS and reload
 gulp.task('sass', function () {
-	return gulp.src('./scss/**/*.scss')
+	return gulp.src('./src/scss/style.scss')
 	.pipe(sourcemaps.init())
-	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	.pipe(sass().on('error', sass.logError))
 	.pipe(sourcemaps.write())
-	.pipe(gulp.dest('./css'))
+	.pipe(gulp.dest('./dist'))
 	.pipe(connect.reload());
 });
 
 //Concat, Minify JS and reload
 gulp.task('js', function () {
-	return gulp.src('./js/src/*.js')
-	.pipe(concat('all.min.js'))
-	.pipe(uglify())
-	.pipe(gulp.dest('./js/'))
+	return gulp.src('./src/js/main.js')
+	.pipe(gulp.dest('./dist'))
 	.pipe(connect.reload());
 });
 
 //Gulp Watcher
 gulp.task('watch', function () {
 	gulp.watch(['./**/*.html'], ['reload']);
-	gulp.watch(['./scss/**/*.scss'], ['sass', 'clean']);
-	gulp.watch(['./js/src/**/*.js'], ['js']);
-});
-
-//Remove unnecessary CSS
-gulp.task('clean', ['sass'], function () {
-	return gulp.src(['./css/*', '!./css/style.css'], {read: false})
-	.pipe(clean(({force: true})));
+	gulp.watch(['./src/scss/**/*.scss'], ['sass']);
+	gulp.watch(['./src/js/main.js'], ['js']);
 });
 
 
-//Production Compilation, without source maps
+//Production Compilation: minification and source maps removal
 gulp.task('prod-sass', function () {
-	return gulp.src('./scss/**/*.scss')
+	return gulp.src('./src/scss/style.scss')
 	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-	.pipe(gulp.dest('./css'))
+	.pipe(gulp.dest('./dist'))
 });
 
-gulp.task('prod', ['prod-sass'], function () {
+gulp.task('prod-js', function () {
+	return gulp.src('./src/js/main.js')
+	.pipe(uglify())
+	.pipe(gulp.dest('./dist'))
+});
+
+gulp.task('prod', ['prod-sass', 'prod-js'], function () {
 	return gulp.src(['./css/*', '!./css/style.css'], {read: false})
 	.pipe(clean(({force: true})));
 });
 
 //Default Task
-gulp.task('default', ['connect', 'watch', 'clean']);
+gulp.task('start', ['sass', 'js', 'connect', 'watch']);
