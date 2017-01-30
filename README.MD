@@ -2,7 +2,6 @@
 ###Brief description of what's inside:
 * Index.html with predefined basic tags
 * SCSS with selectors defined in HTML
-* Two additional predefined SCSS files like reset.scss and common.scss for appropriate goals.
 * Javascript ES5 support only.
 
 ###Folder Structure
@@ -15,8 +14,8 @@
             |-- vendor
             |-- main.js
         |-- scss
-            |-- common
             |-- components
+            |-- helpers
             style.scss
     gulpfile.js
     index.html
