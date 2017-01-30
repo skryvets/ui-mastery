@@ -1,0 +1,30 @@
+@import "../helpers/_helpers.scss";
+
+/*Common CSS Declarations*/
+body {
+
+  background: red;
+
+  @media #{$small-screens-min} {
+    background: blue;
+  }
+
+  @media #{$medium-screens-min} {
+    background: greenyellow;
+  }
+
+  @media #{$large-screens-min} {
+    background: brown;
+  }
+
+}
+h1 {}
+h2 {}
+h3 {}
+p {}
+a {}
+a:hover {}
+
+/*Wrapper*/
+.wrapper {}
+

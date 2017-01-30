@@ -1,6 +1,4 @@
-@import "common/reset";
-@import "common/common";
-
-@import "components/header";
-@import "components/page-body";
-@import "components/footer";
+@import "components/_common.scss";
+@import "components/_header.scss";
+@import "components/_page-body.scss";
+@import "components/_footer.scss";
