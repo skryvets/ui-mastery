@@ -29,4 +29,74 @@ $large-screens-min: "all and (min-width: #{$bp-large-width})";
 // Extra Large
 $x-large-screens-min: "all and (min-width: #{$bp-x-large-width})";
 
+/*
+Mixins based on media queries above
+*/
+
+@mixin base-screens-max{
+  @media #{$base-screens-max} {
+    @content;
+  }
+}
+
+@mixin small-screens-min{
+  @media #{$small-screens-min} {
+    @content;
+  }
+}
+
+@mixin small-screens-only{
+  @media #{$small-screens-only} {
+    @content;
+  }
+}
+
+@mixin small-screens-max{
+  @media #{$small-screens-max} {
+    @content;
+  }
+}
+
+
+@mixin medium-screens-min{
+  @media #{$medium-screens-min} {
+    @content;
+  }
+}
+
+@mixin medium-screens-only{
+  @media #{$medium-screens-only} {
+    @content;
+  }
+}
+
+@mixin medium-screens-max{
+  @media #{$medium-screens-max} {
+    @content;
+  }
+}
+
+@mixin large-screens-min{
+  @media #{$large-screens-min} {
+    @content;
+  }
+}
+
+@mixin large-screens-only{
+  @media #{$large-screens-only} {
+    @content;
+  }
+}
+
+@mixin large-screens-max{
+  @media #{$large-screens-max} {
+    @content;
+  }
+}
+
+@mixin x-large-screens-min{
+  @media #{$x-large-screens-min}{
+    @content;
+  }
+}
 

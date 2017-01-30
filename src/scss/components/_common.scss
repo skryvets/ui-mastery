@@ -5,15 +5,15 @@ body {
 
   background: red;
 
-  @media #{$small-screens-min} {
+  @include small-screens-min{
     background: blue;
   }
 
-  @media #{$medium-screens-min} {
+  @include medium-screens-min{
     background: greenyellow;
   }
 
-  @media #{$large-screens-min} {
+  @include large-screens-min {
     background: brown;
   }
 
