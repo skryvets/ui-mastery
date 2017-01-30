@@ -14,6 +14,7 @@
             |-- vendor
             |-- main.js
         |-- scss
+            |-- common
             |-- components
             |-- helpers
             style.scss
