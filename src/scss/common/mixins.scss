@@ -1,0 +1,33 @@
+
+/*
+Usage:
+
+.foo {
+  @include placeholder {
+    color: green;
+  }
+}
+
+Output:
+
+.foo::-webkit-input-placeholder {
+  color: green;
+}
+.foo:-moz-placeholder {
+  color: green;
+}
+.foo::-moz-placeholder {
+  color: green;
+}
+.foo:-ms-input-placeholder {
+  color: green;
+}
+
+*/
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
