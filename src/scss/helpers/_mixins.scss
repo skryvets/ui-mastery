@@ -1,27 +1,12 @@
 /*
 Usage:
-
-.foo {
+.element{
   @include placeholder {
-    color: green;
+    font-style:italic;
+    color: white;
+    font-weight:100;
   }
 }
-
-Output:
-
-.foo::-webkit-input-placeholder {
-  color: green;
-}
-.foo:-moz-placeholder {
-  color: green;
-}
-.foo::-moz-placeholder {
-  color: green;
-}
-.foo:-ms-input-placeholder {
-  color: green;
-}
-
 */
 
 @mixin placeholder {
@@ -57,5 +42,40 @@ Output:
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
+
+/*
+a {
+  color: gray;
+  @include transition(color .3s ease);
+}
+*/
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+/*
+.container-with-floated-children {
+  @include clearfix;
+}
+*/
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
 
 
