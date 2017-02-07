@@ -1,4 +1,4 @@
-#Starter boilerplate
+#Starter
 ###Brief description of what's inside:
 * Index.html with predefined basic tags
 * SCSS with selectors defined in HTML
