@@ -51,7 +51,7 @@ gulp.task('watch', function () {
 });
 
 
-//Production Compilation: minification and source maps removal
+//Production Compilation: minify and remove source maps
 gulp.task('prod-sass', function () {
 	return gulp.src('./src/scss/style.scss')
 	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -71,3 +71,4 @@ gulp.task('prod', ['prod-sass', 'prod-js'], function () {
 
 //Default Task
 gulp.task('start', ['sass', 'js', 'connect', 'watch']);
+
