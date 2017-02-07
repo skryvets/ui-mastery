@@ -1,0 +1,55 @@
+@import "../../helpers/_helpers.scss";
+
+/*
+Tablet Grid based on mdo/table-grid.
+http://mdo.github.io/table-grid/
+*/
+
+
+/*
+Grid classes
+*/
+
+@include small-screens-min {
+  // Add `.grid` for the table
+  .grid {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  // Add `.col` for the table cells, or columns
+  .col {
+    display: table-cell;
+  }
+
+  // Padded columns
+  .grid-padded {
+    margin-left:  -1rem;
+    margin-right: -1rem;
+  }
+  .grid-padded .grid {
+    border-spacing: 1rem 0;
+  }
+}
+
+// Vertically center grid content
+//
+// Requires content within the column to be inline or inline-block.
+
+.grid-align-middle .col {
+  vertical-align: middle;
+}
+
+
+//
+// Reverse column sorting
+//
+
+.grid-reverse {
+  direction: rtl;
+}
+
+.grid-reverse .col {
+  direction: ltr;
+}
