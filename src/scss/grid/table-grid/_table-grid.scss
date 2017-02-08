@@ -11,45 +11,29 @@ Grid classes
 */
 
 @include small-screens-min {
-  // Add `.grid` for the table
-  .grid {
+  .table-grid {
     display: table;
     width: 100%;
     table-layout: fixed;
   }
 
-  // Add `.col` for the table cells, or columns
-  .col {
-    display: table-cell;
-  }
-
-  // Padded columns
-  .grid-padded {
-    margin-left:  -1rem;
-    margin-right: -1rem;
-  }
-  .grid-padded .grid {
+  .table-grid--table-grid-padded {
     border-spacing: 1rem 0;
   }
-}
 
-// Vertically center grid content
-//
-// Requires content within the column to be inline or inline-block.
+  .table-grid--table-grid-reverse {
+    direction: rtl;
+    .table-col{
+      direction: ltr;
+    }
+  }
 
-.grid-align-middle .col {
-  vertical-align: middle;
-}
+  .table-col {
+    display: table-cell;
+    background: yellow;
+  }
 
-
-//
-// Reverse column sorting
-//
-
-.grid-reverse {
-  direction: rtl;
-}
-
-.grid-reverse .col {
-  direction: ltr;
+  .table-col--table-col-vertical-aligned {
+    vertical-align: middle;
+  }
 }
