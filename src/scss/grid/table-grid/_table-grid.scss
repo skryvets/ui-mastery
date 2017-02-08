@@ -10,6 +10,16 @@ http://mdo.github.io/table-grid/
 Grid classes
 */
 
+.table-col {
+  background: yellow;
+}
+.table-col--center-aligned-inline {
+  text-align: center;
+}
+.table-col--center-aligned-block {
+  margin: 0 auto;
+}
+
 @include small-screens-min {
   .table-grid {
     display: table;
@@ -30,16 +40,9 @@ Grid classes
 
   .table-col {
     display: table-cell;
-    background: yellow;
   }
 
   .table-col--vertical-aligned {
     vertical-align: middle;
-  }
-  .table-col--center-aligned-inline {
-    text-align: center;
-  }
-  .table-col--center-aligned-block {
-    margin: 0 auto;
   }
 }
