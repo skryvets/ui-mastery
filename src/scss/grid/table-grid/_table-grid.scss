@@ -36,4 +36,10 @@ Grid classes
   .table-col--vertical-aligned {
     vertical-align: middle;
   }
+  .table-col--center-aligned-inline {
+    text-align: center;
+  }
+  .table-col--center-aligned-block {
+    margin: 0 auto;
+  }
 }
