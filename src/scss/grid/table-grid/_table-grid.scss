@@ -10,12 +10,6 @@ http://mdo.github.io/table-grid/
 Grid classes
 */
 
-.table-grid--padded {
-  .table-col {
-    margin: 1rem;
-  }
-}
-
 .table-col {
   background: yellow;
 }
@@ -28,7 +22,16 @@ Grid classes
   margin: 0 auto;
 }
 
+@include base-screens-max{
+  .table-grid--padded {
+    .table-col {
+      margin: 1rem;
+    }
+  }
+}
+
 @include small-screens-min {
+
   .table-grid {
     display: table;
     width: 100%;
@@ -36,7 +39,6 @@ Grid classes
   }
 
   .table-grid--padded {
-    margin: 0;
     border-spacing: 1rem 0;
   }
 
