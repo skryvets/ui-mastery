@@ -17,11 +17,11 @@ Grid classes
     table-layout: fixed;
   }
 
-  .table-grid--table-grid-padded {
+  .table-grid--padded {
     border-spacing: 1rem 0;
   }
 
-  .table-grid--table-grid-reverse {
+  .table-grid--reverse {
     direction: rtl;
     .table-col{
       direction: ltr;
@@ -33,7 +33,7 @@ Grid classes
     background: yellow;
   }
 
-  .table-col--table-col-vertical-aligned {
+  .table-col--vertical-aligned {
     vertical-align: middle;
   }
 }
