@@ -3,19 +3,7 @@
 /*Common CSS Declarations*/
 body {
 
-  background: red;
-
-  @include small-screens-min{
-    background: blue;
-  }
-
-  @include medium-screens-min{
-    background: greenyellow;
-  }
-
-  @include large-screens-min {
-    background: brown;
-  }
+  background: $shady-lady;
 
 }
 h1 {}

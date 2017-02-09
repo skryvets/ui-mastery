@@ -10,10 +10,6 @@ http://mdo.github.io/table-grid/
 Grid classes
 */
 
-.table-col {
-  background: yellow;
-}
-
 .table-col--center-aligned-inline {
   text-align: center;
 }
@@ -27,6 +23,19 @@ Grid classes
     .table-col {
       margin: 1rem;
     }
+  }
+}
+
+.table-grid--example {
+  margin-bottom: 1rem;
+  .table-col {
+    text-align: center;
+    background: $cabaret;
+    padding: 20px;
+    color: #fff;
+  }
+  .table-col:nth-child(odd){
+    background: $ruby;
   }
 }
 
