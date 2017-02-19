@@ -21,13 +21,13 @@ Grid classes
 @include base-screens-max{
   .table-grid--padded {
     .table-col {
-      margin: 1rem;
+      margin: 20px;
     }
   }
 }
 
 .table-grid--example {
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
   .table-col {
     text-align: center;
     background: $cabaret;
@@ -48,7 +48,7 @@ Grid classes
   }
 
   .table-grid--padded {
-    border-spacing: 1rem 0;
+    border-spacing: 20px 0;
   }
 
   .table-grid--reverse {
