@@ -71,4 +71,3 @@ gulp.task('prod', ['prod-sass', 'prod-js'], function () {
 
 //Default Task
 gulp.task('start', ['sass', 'js', 'connect', 'watch']);
-
