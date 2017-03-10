@@ -69,3 +69,8 @@ a {
         clear: both;
     }
 }
+
+@mixin square($size){
+    width: $size;
+    height: $size;
+}
