@@ -10,39 +10,35 @@ Usage:
 */
 
 @mixin placeholder {
-  ::-webkit-input-placeholder {
-    @content
-  }
-  :-moz-placeholder {
-    @content
-  }
-  ::-moz-placeholder {
-    @content
-  }
-  :-ms-input-placeholder {
-    @content
-  }
+    ::-webkit-input-placeholder {
+        @content
+    }
+    :-moz-placeholder {
+        @content
+    }
+    ::-moz-placeholder {
+        @content
+    }
+    :-ms-input-placeholder {
+        @content
+    }
 }
-
 @mixin hide {
-  display: none;
+    display: none;
 }
-
 @mixin show {
-  display: block;
+    display: block;
 }
-
 @mixin visually-hidden {
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip: rect(0, 0, 0, 0);
-  position: absolute;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
 }
-
 /*
 a {
   color: gray;
@@ -51,14 +47,12 @@ a {
 */
 
 @mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
 }
-
-
 /*
 .container-with-floated-children {
   @include clearfix;
@@ -66,12 +60,12 @@ a {
 */
 
 @mixin clearfix {
-  *zoom: 1;
-  &:before, &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
+    *zoom: 1;
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
 }

@@ -1,68 +1,64 @@
 @import "../../helpers/_helpers.scss";
-
 /*
 Table Grid based on mdo/table-grid.
 http://mdo.github.io/table-grid/
 */
-
 
 /*
 Grid classes
 */
 
 .table-col--center-inline {
-  text-align: center;
+    text-align: center;
 }
-
 .table-col--center-block {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
-@include base-screens-max{
-  .table-grid--padded {
-    .table-col {
-      margin: 20px;
+@include base-screens-max {
+    .table-grid--padded {
+        .table-col {
+            margin: 20px;
+        }
     }
-  }
 }
 
 .table-grid--example {
-  margin-bottom: 20px;
-  .table-col {
-    text-align: center;
-    background: $cabaret;
-    padding: 20px;
-    color: #fff;
-  }
-  .table-col:nth-child(odd){
-    background: $ruby;
-  }
+    margin-bottom: 20px;
+    .table-col {
+        text-align: center;
+        background: $cabaret;
+        padding: 20px;
+        color: #fff;
+    }
+    .table-col:nth-child(odd) {
+        background: $ruby;
+    }
 }
 
 @include small-screens-min {
-
-  .table-grid {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-  }
-
-  .table-grid--padded {
-    border-spacing: 20px 0;
-  }
-
-  .table-grid--reverse {
-    direction: rtl;
-    .table-col{
-      direction: ltr;
+    .table-grid {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
     }
-  }
 
-  .table-col {
-    display: table-cell;
-  }
+    .table-grid--padded {
+        border-spacing: 20px 0;
+    }
 
-  .table-col--vertical-aligned {
-    vertical-align: middle;
-  }
+    .table-grid--reverse {
+        direction: rtl;
+        .table-col {
+            direction: ltr;
+        }
+    }
+
+    .table-col {
+        display: table-cell;
+    }
+
+    .table-col--vertical-aligned {
+        vertical-align: middle;
+    }
 }
