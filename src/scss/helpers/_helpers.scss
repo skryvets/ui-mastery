@@ -1,4 +1,18 @@
-@import "_mixins.scss";
-@import "_vars.scss";
-@import "_media-query.scss";
-@import "_helper-classes.scss";
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
+}
+
+.clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

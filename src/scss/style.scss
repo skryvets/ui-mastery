@@ -1,8 +1,17 @@
+//Reset and Common Styles
 @import "common/_reset.scss";
 @import "common/_common.scss";
+
+//Helper Classes
+@import "helpers/_helpers.scss";
+@import "helpers/_media-query.scss";
+@import "helpers/_mixins.scss";
+@import "helpers/_vars.scss";
+
+//Grids
 @import "grid/table-grid/_table-grid.scss";
 
-
+//Components
 @import "components/_header.scss";
 @import "components/_page-body.scss";
 @import "components/_footer.scss";
