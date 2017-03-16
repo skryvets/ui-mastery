@@ -2,14 +2,20 @@
 @import "common/_reset.scss";
 @import "common/_common.scss";
 
+//Config File
+@import "_config.scss";
+
 //Helper Classes
-@import "helpers/_helpers.scss";
+@import "helpers/_vars.scss";
 @import "helpers/_media-query.scss";
 @import "helpers/_mixins.scss";
-@import "helpers/_vars.scss";
+@import "helpers/_helpers.scss";
 
 //Grids
 @import "grid/table-grid/_table-grid.scss";
+
+@import "grid/motif-grid/mixins/_m-grid.scss";
+@import "grid/motif-grid/_motif-grid.scss";
 
 //Components
 @import "components/_header.scss";

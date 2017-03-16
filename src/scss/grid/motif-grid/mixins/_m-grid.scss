@@ -1,0 +1,146 @@
+// Set @total-width to 100% for a fluid layout
+$total-width: 960px;
+
+// Clearfix Mixin
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "\0020";
+        height: 0;
+        display: block;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin row($mar: $base-margin) {
+
+    $grid-margin: 1rem * (($mar / 2) / $root-text-size);
+
+    margin-left: -$grid-margin;
+    margin-right: -$grid-margin;
+
+    @include clearfix();
+}
+
+@mixin grid-column($float: left) {
+    display: inline;
+    float: $float;
+}
+
+@mixin grid-padding($mar: $base-margin) {
+
+    $grid-margin: 1rem * (($mar / 2) / $root-text-size);
+
+    padding-left: $grid-margin;
+    padding-right: $grid-margin;
+}
+
+@mixin grid-create ( $int, $total, $pre, $width ) {
+
+    @if ( $pre == m ) and ( $width == 75% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gm-three-quarters;
+        }
+    }
+    @if ( $pre == m ) and ( $width == 66.66667% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gm-two-thirds;
+        }
+    }
+    @if ( $pre == m ) and ( $width == 50% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gm-half;
+        }
+    }
+    @if ( $pre == m ) and ( $width == 33.33333% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gm-third;
+        }
+    }
+    @if ( $pre == m ) and ( $width == 25% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gm-quarter;
+        }
+    }
+    @if ( $pre == s ) and ( $width == 75% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gs-three-quarters;
+        }
+    }
+    @if ( $pre == s ) and ( $width == 66.66667% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gs-two-thirds;
+        }
+    }
+    @if ( $pre == s ) and ( $width == 50% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gs-half;
+        }
+    }
+    @if ( $pre == s ) and ( $width == 33.33333% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gs-third;
+        }
+    }
+    @if ( $pre == s ) and ( $width == 25% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gs-quarter;
+        }
+    }
+    @if ( $pre == l ) and ( $width == 75% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gl-three-quarters;
+        }
+    }
+    @if ( $pre == l ) and ( $width == 66.66667% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gl-two-thirds;
+        }
+    }
+    @if ( $pre == l ) and ( $width == 50% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gl-half;
+        }
+    }
+    @if ( $pre == l ) and ( $width == 33.33333% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gl-third;
+        }
+    }
+    @if ( $pre == l ) and ( $width == 25% ) {
+        [class*="m-#{int}of#{total}"] {
+            @extend .gl-quarter;
+        }
+    }
+    @if not ( $width == 25% ) and not ( $width == 33.33333% ) and not ( $width == 50% ) and not( $width == 66.66667% ) and not( $width == 75% ){
+        [class*="#{pre}-#{int}of#{total}"] {
+            width: $width;
+        }
+    }
+}
+
+@mixin grid-loop ( $int, $total, $pre ) {
+
+    @if ( $int > 0 ) and ( $total > 4 ) {
+        $width: ( 100% * ( $int / $total ) ); //removed round. Need to be refactored
+
+        @include grid-create($int, $total, $pre, $width);
+        @include grid-loop( $int - 1, $total, $pre );
+    }
+
+    //@include  grid-loop(0, $total);
+    //@include  grid-loop($int, 4);
+}
+
+@mixin grid-all( $int, $total, $pre ) {
+    @if ( $int > 0 ) and ( $total > 4 ) {
+        @include grid-loop($int, $total, $pre);
+        @include grid-all($total - 2, $total - 1, $pre );
+    }
+
+    //@include  grid-all(0, $total, $pre);
+    //@include  grid-all($int, 4, $pre);
+}

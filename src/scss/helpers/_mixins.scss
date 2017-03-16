@@ -9,7 +9,7 @@ Usage:
 }
 */
 
-@mixin placeholder {
+@mixin placeholder() {
     ::-webkit-input-placeholder {
         @content
     }
@@ -23,13 +23,13 @@ Usage:
         @content
     }
 }
-@mixin hide {
+@mixin hidden() {
     display: none;
 }
-@mixin show {
+@mixin shown() {
     display: block;
 }
-@mixin visually-hidden {
+@mixin visually-hidden() {
     margin: -1px;
     padding: 0;
     width: 1px;
@@ -39,6 +39,14 @@ Usage:
     clip: rect(0, 0, 0, 0);
     position: absolute;
 }
+@mixin show-hidden() {
+    width: auto;
+    height: auto;
+    margin: 0;
+    position: relative;
+    clip: auto;
+}
+
 /*
 a {
   color: gray;
