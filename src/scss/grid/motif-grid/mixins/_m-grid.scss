@@ -187,3 +187,9 @@ $total-width: 960px;
         }
     }
 }
+
+//Fix for 1of7 on small screens
+
+[class*="gcl"] {
+    @include grid-padding( $tablet-margin );
+}
