@@ -1,0 +1,68 @@
+
+.panel,
+[class*="panel-"],
+[class*="-panel"] {
+    border-radius: 3px;
+    color: #262626;
+    border: 1px solid #cfcbca;
+}
+
+.panel--alt {
+    background-color: #000;
+}
+.panel--inverse {
+    color: $white;
+    background-color: blue;
+    border-color: blue;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: inherit;
+    }
+
+    a {
+        &,
+        &:hover,
+        &:focus {
+            color: inherit;
+        }
+        &:hover,
+        &:focus {
+            color: #cfcbca;
+        }
+    }
+
+    .btn {
+        &,
+        &:hover,
+        &:focus {
+            color: #cfcbca;
+        }
+    }
+}
+
+.alert-panel {
+    &--info {
+        border-color: blue;
+        background-color: blue;
+    }
+    &--error {
+        border-color: red;
+        background-color: red;
+    }
+    &--success {
+        border-color: green;
+        background-color: green;
+    }
+}
+
+.pam {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
