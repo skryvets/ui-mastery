@@ -50,6 +50,9 @@ gulp.task('watch', function () {
     gulp.watch(['./src/js/main.js'], ['js']);
 });
 
+//Dev compilation with sourcemaps. It's needed for dev server
+gulp.task('dev', ['sass', 'js']);
+
 
 //Production Compilation: minify and remove source maps
 gulp.task('prod-sass', function () {
