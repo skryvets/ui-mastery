@@ -6,7 +6,7 @@
 
 ### Folder Structure
 ```
-|-- .sme-boilerplate
+|-- .initui
     |-- content-images
     |-- images
     |-- src
