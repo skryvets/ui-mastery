@@ -29,91 +29,76 @@ $total-width: 960px;
     @if ( $pre == m ) and ( $width == 75% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gm-three-quarters;
-            //width: 75%;
         }
     }
     @if ( $pre == m ) and ( $width == 66.66666% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gm-two-thirds;
-            //width: 66.66666%;
         }
     }
     @if ( $pre == m ) and ( $width == 50% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gm-half;
-            //width: 50%;
         }
     }
     @if ( $pre == m ) and ( $width == 33.33333% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gm-third;
-            //width: 33.33333%;
         }
     }
     @if ( $pre == m ) and ( $width == 25% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gm-quarter;
-            //width: 25%;
         }
     }
     @if ( $pre == s ) and ( $width == 75% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gs-three-quarters;
-            //width: 75%;
         }
     }
     @if ( $pre == s ) and ( $width == 66.66666% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gs-two-thirds;
-            //width: 66.66666%;
         }
     }
     @if ( $pre == s ) and ( $width == 50% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gs-half;
-            //width: 50%;
         }
     }
     @if ( $pre == s ) and ( $width == 33.33333% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gs-third;
-            //width: 33.33333%;
         }
     }
     @if ( $pre == s ) and ( $width == 25% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gs-quarter;
-            //width: 25%;
         }
     }
     @if ( $pre == l ) and ( $width == 75% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gl-three-quarters;
-            //width: 75%;
         }
     }
     @if ( $pre == l ) and ( $width == 66.66666% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gl-two-thirds;
-            //width: 66.66666%;
         }
     }
     @if ( $pre == l ) and ( $width == 50% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gl-half;
-            //width: 50%;
         }
     }
     @if ( $pre == l ) and ( $width == 33.33333% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gl-third;
-            //width: 33.33333%;
         }
     }
     @if ( $pre == l ) and ( $width == 25% ) {
         [class*="m-#{$int}of#{$total}"] {
             @extend .gl-quarter;
-            //width: 25%;
         }
     }
     @if not ( $width == 25% ) and not ( $width == 33.33333% ) and not ( $width == 50% ) and not( $width == 66.66666% ) and not( $width == 75% ){
