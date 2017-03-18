@@ -38,7 +38,11 @@ gulp.task('sass', function () {
 
 //Concat, Minify JS and reload
 gulp.task('js', function () {
-    return gulp.src('./src/js/main.js')
+    return gulp.src([
+        './src/js/vendor/jquery-3.2.0.min.js', //Compile jquery first
+        './src/js/main.js' // Then other files
+    ])
+    .pipe(concat('main.js'))
     .pipe(gulp.dest('./dist'))
     .pipe(connect.reload());
 });
