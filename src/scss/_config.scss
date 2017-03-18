@@ -19,28 +19,3 @@ $bp-medium-width: 768px;
 $bp-large-width: 992px;
 $bp-x-large-width: 1200px;
 
-// Typographic Scale
-// $inch-text-size: --;
-$canon-text-size: 38px;
-$paragon-text-size: 30px;
-$primer-text-size: 24px;
-$tertia-text-size: 18px;
-$normal-text-size: 14px;
-$petite-text-size: 12px;
-// $minion-text-size: --;
-
-// Baseline Typography
-$base-text-size: $normal-text-size;
-
-// Change this if `html` !== `100%`
-$root-text-size: 16px;
-
-// For line-height in .type-size mixin
-$round-to-nearest: quarter;
-
-// Vertical Rhythm
-$base-vertical: 20px;
-
-// Border Variables
-$default-border-width: 1px;
-$default-border-radius: 3px;
