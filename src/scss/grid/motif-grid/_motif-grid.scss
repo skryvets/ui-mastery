@@ -86,6 +86,8 @@ all of the grids also have a few "fuzzy" shortcuts as well:
 
 */
 
+@import "mixins/_m-grid.scss";
+
 // Aliases for all breakpoints
 .g-halves,
 .g-thirds,
@@ -144,6 +146,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
  */
 @include small-screens-max {
     [class*="gs-row"] {
+
         @include row( $mobile-margin );
 
         ul & {
