@@ -1,20 +1,6 @@
 // Set @total-width to 100% for a fluid layout
 $total-width: 960px;
 
-// Clearfix Mixin
-@mixin clearfix() {
-    &:before,
-    &:after {
-        content: "\0020";
-        height: 0;
-        display: block;
-        overflow: hidden;
-    }
-    &:after {
-        clear: both;
-    }
-}
-
 @mixin row($mar: $base-margin) {
 
     $grid-margin: 1rem * (($mar / 2) / $root-text-size);
@@ -137,21 +123,7 @@ $total-width: 960px;
     }
 }
 
-//@mixin grid-loop ( $int, $total, $pre ) {
-//
-//    @if ( $int > 0 ) and ( $total > 4 ) {
-//        $width: 100% * ( $int / $total ); //removed round. Need to be refactored
-//
-//        @include grid-create($int, $total, $pre, $width);
-//        @include grid-loop( $int - 1, $total, $pre );
-//    }
-//
-//    //@include  grid-loop(0, $total);
-//    //@include  grid-loop($int, 4);
-//}
-
 @mixin grid-loop ( $int, $total, $pre ) {
-
     @if ( $int > 0 ) and ( $total > 4 ) {
         @while(( $int > 0 ) and ( $total > 4 )) {
             $width: 100% * ( $int / $total ); //removed round. Need to be refactored
@@ -159,24 +131,7 @@ $total-width: 960px;
             $int: $int - 1;
         }
     }
-
-    //@include  grid-loop(0, $total);
-    //@include  grid-loop($int, 4);
 }
-
-//@mixin grid-all( $int, $total, $pre ) {
-//
-//    @if ( $int > 0 ) and ( $total > 4 ) {
-//        @include grid-loop($int, $total, $pre);
-//        @include grid-all($total - 2, $total - 1, $pre );
-//    }
-//
-//    //@include grid-all(0, $total, $pre);
-//    //@include grid-all($int, 4, $pre);
-//}
-
-//Grid All Rewritten with loops
-
 
 @mixin grid-all( $int, $total, $pre ) {
     @if( $int > 0 ) and ( $total > 4 ) {
