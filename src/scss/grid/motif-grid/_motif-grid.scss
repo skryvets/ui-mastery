@@ -94,7 +94,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
     @include row( $mobile-margin );
 
     /* Pretty */
-    letter-spacing: -0.31em;
+    letter-spacing: -4px;
     text-rendering: optimizespeed;
 
     ul & {
@@ -136,7 +136,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
 // in markup.
 .opera-only :-o-prefocus,
 .g-thirds {
-    word-spacing: -0.43em;
+    word-spacing: -6px;
 }
 
 /**
@@ -193,7 +193,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
         width: 100%;
     }
     //.gs-row--flex {
-    //    letter-spacing: -0.31em;
+    //    letter-spacing: -4px;
     //    text-rendering: optimizespeed;
     //}
     //.gs-row--flex > [class*="gcs"] {
@@ -211,7 +211,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
     // in markup.
     //.opera-only :-o-prefocus,
     //.gs-row--flex {
-    //    word-spacing: -0.43em;
+    //    word-spacing: -6px;
     //}
 
     // Shortcuts/Aliases
@@ -296,7 +296,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
     @include grid-all(( $tablet-total-cols - 1 ), $tablet-total-cols, m);
 
     //.gm-row--flex {
-    //    letter-spacing: -0.31em;
+    //    letter-spacing: -4px;
     //    text-rendering: optimizespeed;
     //}
     //
@@ -311,7 +311,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
 
     //.opera-only :-o-prefocus,
     //.gm-row--flex {
-    //    word-spacing: -0.43em;
+    //    word-spacing: -6px;
     //}
 
     // Shortcuts/Aliases
@@ -512,7 +512,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
     */
 
     //.gl-row--flex {
-    //    letter-spacing: -0.31em;
+    //    letter-spacing: -4px;
     //    text-rendering: optimizespeed;
     //}
     //.gl-row--flex > [class*="gcl"] {
@@ -525,7 +525,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
     //}
     //.opera-only :-o-prefocus,
     //.gl-row--flex {
-    //    word-spacing: -0.43em;
+    //    word-spacing: -6px;
     //}
     //
     //// Shortcuts/Aliases

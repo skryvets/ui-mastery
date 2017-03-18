@@ -3,7 +3,7 @@ $total-width: 960px;
 
 @mixin row($mar: $base-margin) {
 
-    $grid-margin: 1rem * (($mar / 2) / $root-text-size);
+    $grid-margin: 16px * (($mar / 2) / $root-text-size);
 
     margin-left: -$grid-margin;
     margin-right: -$grid-margin;
@@ -18,7 +18,7 @@ $total-width: 960px;
 
 @mixin grid-padding($mar: $base-margin) {
 
-    $grid-margin: 1rem * (($mar / 2) / $root-text-size);
+    $grid-margin: 16px * (($mar / 2) / $root-text-size);
 
     padding-left: $grid-margin;
     padding-right: $grid-margin;
