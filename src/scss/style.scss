@@ -14,9 +14,7 @@
 
 //Grids
 @import "grid/table-grid/_table-grid.scss";
-
-@import "grid/motif-grid/mixins/_m-grid.scss";
-@import "grid/motif-grid/_motif-grid.scss";
+@import "grid/motif-grid/_motif-grid-all.scss";
 
 //Components
 @import "components/_header.scss";
