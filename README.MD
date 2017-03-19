@@ -2,7 +2,7 @@
 ### Brief description of what's inside:
 * Index.html with predefined basic tags
 * SCSS with selectors defined in HTML
-* Javascript ES5 support only.
+* Javascript ES5 support only (Please checkout to `dev-es6` branch in order to have ES6 support).
 
 ### Folder Structure
 ```
