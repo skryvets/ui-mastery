@@ -2,7 +2,7 @@
 ### Brief description of what's inside:
 * Index.html with predefined basic tags
 * SCSS with selectors defined in HTML
-* Javascript ES5 support only.
+* Javascript ES6 support only.
 
 ### Folder Structure
 ```
@@ -24,6 +24,7 @@
             style.scss
     gulpfile.js
     index.html
+    jspm_config.js
     package.json
     README.MD
 ```
@@ -31,7 +32,7 @@
 ### Features of the packaged
 * SCSS compilation and minification to "dist/style.css" file.
 * Sourcemaps of SCSS are available during development.
-* Javascript minification.
+* Javascript ES6 Modules bundling. Sourcemaps are available during development. Minification is available for prod version 
 * Built-in WebServer with livereload is included.
 
 ### Grid Systems
@@ -48,4 +49,3 @@
 * SCSS files should be inside ```src/scss``` folder. Then you can import any scss into main ```styles.scss``` file
 * Execute ```gulp dev``` in order compile JS and SCSS and leave SCSS sourcemaps. JS and SCSS wouln't be minified. Can be useful for dev purposes. This is "one-time" compilation (Without File Watcher).
 * Execute ```gulp prod``` in order to remove SCSS sourcemaps and minify js/css. This is "one-time" compilation (Without File Watcher).
-* JS files should be inside ```src/js``` folder
