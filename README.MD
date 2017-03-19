@@ -2,7 +2,7 @@
 ### Brief description of what's inside:
 * Index.html with predefined basic tags
 * SCSS with selectors defined in HTML
-* Javascript ES6 support only.
+* Javascript ES6 syntax and modules bundling is supported.
 
 ### Folder Structure
 ```
