@@ -4,17 +4,19 @@ import jQuery from './vendor/jquery-3.2.0.min.js';
     
     "use strict";
     
-    let JS = function () {
-        this.initExample();
-    };
+    class JS {
+        constructor(){
+            this.initExample();
+        }
+    }
     
-    JS.prototype.initExample = function () {
+     function initExample() {
         console.log("Hello world from es6!");
         
         setTimeout(() => {
-            console.log("Hello world from es6 with setTimeout!");
+            console.log("Hello world from es6 with Fat Arrow Function!");
         }, 300);
-    };
+    }
     
     new JS();
     
