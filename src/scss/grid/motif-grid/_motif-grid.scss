@@ -195,27 +195,21 @@ all of the grids also have a few "fuzzy" shortcuts as well:
     .gcs-full {
         width: 100%;
     }
-    //.gs-row--flex {
-    //    letter-spacing: -4px;
-    //    text-rendering: optimizespeed;
-    //}
-    //.gs-row--flex > [class*="gcs"] {
-    //    float: none;
-    //    display: inline-block;
-    //    letter-spacing: normal;
-    //    word-spacing: normal;
-    //    vertical-align: top;
-    //    text-rendering: auto;
-    //}
+    .gs-row--flex {
+        @include row-flex;
+    }
+    .gs-row--flex > [class*="gcs"] {
+        @include column-flex;
+    }
 
     // Opera as of 12 on Windows needs word-spacing.
     // The ".opera-only" selector is used to prevent
     // actual prefocus styling and is not required 
     // in markup.
-    //.opera-only :-o-prefocus,
-    //.gs-row--flex {
-    //    word-spacing: -6px;
-    //}
+    .opera-only :-o-prefocus,
+    .gs-row--flex {
+        word-spacing: -6px;
+    }
 
     // Shortcuts/Aliases
     .gs {
@@ -223,11 +217,11 @@ all of the grids also have a few "fuzzy" shortcuts as well:
         &-thirds,
         &-halves {
             @extend [class*="gs-row"];
-            //@extend .gs-row--flex;
+            @include row-flex;
 
             > * {
                 @extend [class*="gcs"];
-                //@extend .gs-row--flex > [class*="gcs"];
+                @include column-flex;
             }
         }
         &-quarters > * {
@@ -298,24 +292,18 @@ all of the grids also have a few "fuzzy" shortcuts as well:
     
     @include grid-all(( $tablet-total-cols - 1 ), $tablet-total-cols, m);
 
-    //.gm-row--flex {
-    //    letter-spacing: -4px;
-    //    text-rendering: optimizespeed;
-    //}
-    //
-    //.gm-row--flex > [class*="gcm"] {
-    //    float: none;
-    //    display: inline-block;
-    //    letter-spacing: normal;
-    //    word-spacing: normal;
-    //    vertical-align: top;
-    //    text-rendering: auto;
-    //}
+    .gm-row--flex {
+        @include row-flex;
+    }
 
-    //.opera-only :-o-prefocus,
-    //.gm-row--flex {
-    //    word-spacing: -6px;
-    //}
+    .gm-row--flex > [class*="gcm"] {
+        @include column-flex;
+    }
+
+    .opera-only :-o-prefocus,
+    .gm-row--flex {
+        word-spacing: -6px;
+    }
 
     // Shortcuts/Aliases
     .gm {
@@ -323,11 +311,11 @@ all of the grids also have a few "fuzzy" shortcuts as well:
         &-thirds,
         &-halves {
             @extend [class*="gm-row"];
-            //@extend .gm-row--flex;
+            @include row-flex;
 
             > * {
                 @extend [class*="gcm"];
-                //@extend .gm-row--flex > [class*="gcm"];
+                @include column-flex;
             }
         }
         &-quarters > * {
@@ -514,44 +502,38 @@ all of the grids also have a few "fuzzy" shortcuts as well:
     
     */
 
-    //.gl-row--flex {
-    //    letter-spacing: -4px;
-    //    text-rendering: optimizespeed;
-    //}
-    //.gl-row--flex > [class*="gcl"] {
-    //    float: none;
-    //    display: inline-block;
-    //    letter-spacing: normal;
-    //    word-spacing: normal;
-    //    vertical-align: top;
-    //    text-rendering: auto;
-    //}
-    //.opera-only :-o-prefocus,
-    //.gl-row--flex {
-    //    word-spacing: -6px;
-    //}
-    //
-    //// Shortcuts/Aliases
-    //.gl {
-    //    &-quarters,
-    //    &-thirds,
-    //    &-halves {
-    //        @extend [class*="gl-row"];
-    //        @extend .gl-row--flex;
-    //
-    //        > * {
-    //            @extend [class*="gcl"];
-    //            @extend .gl-row--flex > [class*="gcl"];
-    //        }
-    //    }
-    //    &-quarters > * {
-    //        @extend .gl-quarter;
-    //    }
-    //    &-thirds > * {
-    //        @extend .gl-third;
-    //    }
-    //    &-halves > * {
-    //        @extend .gl-half;
-    //    }
-    //}
+    .gl-row--flex {
+        @include row-flex;
+    }
+    .gl-row--flex > [class*="gcl"] {
+        @include column-flex;
+    }
+    .opera-only :-o-prefocus,
+    .gl-row--flex {
+        word-spacing: -6px;
+    }
+
+    // Shortcuts/Aliases
+    .gl {
+        &-quarters,
+        &-thirds,
+        &-halves {
+            @extend [class*="gl-row"];
+            @include row-flex;
+
+            > * {
+                @extend [class*="gcl"];
+                @include column-flex;
+            }
+        }
+        &-quarters > * {
+            @extend .gl-quarter;
+        }
+        &-thirds > * {
+            @extend .gl-third;
+        }
+        &-halves > * {
+            @extend .gl-half;
+        }
+    }
 }
