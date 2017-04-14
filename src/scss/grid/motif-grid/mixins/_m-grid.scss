@@ -127,3 +127,17 @@ $total-width: 960px;
         }
     }
 }
+
+@mixin row-flex {
+    letter-spacing: -4px;
+    text-rendering: optimizespeed;
+}
+
+@mixin column-flex {
+    float: none;
+    display: inline-block;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
