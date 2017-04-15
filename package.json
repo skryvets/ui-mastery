@@ -6,10 +6,14 @@
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
+    "gulp-jspm": "^0.5.13",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.2.2",
     "gulp-uglify": "^2.0.0",
-    "gulp-jspm": "^0.5.13"
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.6.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4"
   },
   "jspm": {
     "configFile": "jspm_config.js",

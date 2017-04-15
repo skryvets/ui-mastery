@@ -39,7 +39,7 @@ gulp.task('sass', function () {
 
 //Compile and bundle js
 gulp.task('js-bundle', function(){
-    return gulp.src('./src/js/main.js')
+    return gulp.src('./src/js/actions/main.js')
     .pipe(sourcemaps.init())
     .pipe(gulp_jspm({selfExecutingBundle: true}))
     .pipe(sourcemaps.write('.'))
@@ -51,7 +51,7 @@ gulp.task('js-bundle', function(){
 gulp.task('watch', function () {
     gulp.watch(['./**/*.html'], ['reload']);
     gulp.watch(['./src/scss/**/*.scss'], ['sass']);
-    gulp.watch(['./src/js/**/*.js'], ['js-bundle']);
+    gulp.watch(['./src/js/actions/**/*.js'], ['js-bundle']);
 });
 
 //Dev compilation with sourcemaps. It's needed for dev server
@@ -66,7 +66,7 @@ gulp.task('prod-sass', function () {
 });
 
 gulp.task('prod-js-bundle', function () {
-    return gulp.src('./src/js/main.js')
+    return gulp.src('./src/js/actions/main.js')
     .pipe(gulp_jspm({selfExecutingBundle: true, minify: true}))
     .pipe(gulp.dest('./dist'))
     .pipe(connect.reload());
