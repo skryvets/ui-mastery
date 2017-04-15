@@ -1,23 +1,9 @@
-import jQuery from './vendor/jquery-3.2.0.min.js';
+import log from './log'
 
-(function ($) {
-    
-    "use strict";
-    
-    class JS {
-        constructor(){
-            this.initExample();
-        }
+class App {
+    constructor() {
+        log()
     }
-    
-     function initExample() {
-        console.log("Hello world from es6!");
-        
-        setTimeout(() => {
-            console.log("Hello world from es6 with Fat Arrow Function!");
-        }, 300);
-    }
-    
-    new JS();
-    
-}(jQuery));
+}
+
+new App()
