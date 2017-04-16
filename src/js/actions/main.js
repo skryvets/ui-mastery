@@ -1,8 +1,8 @@
-import log from './log'
+import returnFive from './sample'
 
 class App {
     constructor() {
-        log()
+        returnFive()
     }
 }
 

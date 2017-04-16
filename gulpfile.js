@@ -8,6 +8,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var gulp_jspm = require('gulp-jspm');
+var karma = require("gulp-karma-runner");
 
 gulp.task('default', function () {
 });

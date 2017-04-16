@@ -7,12 +7,14 @@
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
     "gulp-jspm": "^0.5.13",
+    "gulp-karma-runner": "^1.2.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.2.2",
     "gulp-uglify": "^2.0.0",
     "jasmine-core": "^2.5.2",
     "karma": "^1.6.0",
     "karma-jasmine": "^1.1.0",
+    "karma-jspm": "^2.2.3",
     "karma-phantomjs-launcher": "^1.0.4"
   },
   "jspm": {
