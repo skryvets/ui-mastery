@@ -1,18 +1,20 @@
 /*Common CSS Declarations*/
-* {
-    box-sizing: border-box;
-}
 body {}
 h1 {}
 h2 {}
 h3 {}
 p {}
 a {}
-a:hover {}
+a {
+    &:hover,
+    &:focus,
+    &:active {
+
+    }
+}
 
 /*Wrapper*/
 .wrapper {
     width: 92%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
