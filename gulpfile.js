@@ -7,6 +7,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
+var gulp_jspm = require('gulp-jspm');
+var karma = require("gulp-karma-runner");
 
 gulp.task('default', function () {
 });
@@ -36,13 +38,12 @@ gulp.task('sass', function () {
     .pipe(connect.reload());
 });
 
-//Concat, Minify JS and reload
-gulp.task('js', function () {
-    return gulp.src([
-        './src/js/vendor/jquery-3.2.0.min.js', //Compile jquery first
-        './src/js/main.js' // Then other files
-    ])
-    .pipe(concat('main.js'))
+//Compile and bundle js
+gulp.task('js-bundle', function(){
+    return gulp.src('./src/js/actions/main.js')
+    .pipe(sourcemaps.init())
+    .pipe(gulp_jspm({selfExecutingBundle: true}))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist'))
     .pipe(connect.reload());
 });
@@ -51,11 +52,11 @@ gulp.task('js', function () {
 gulp.task('watch', function () {
     gulp.watch(['./**/*.html'], ['reload']);
     gulp.watch(['./src/scss/**/*.scss'], ['sass']);
-    gulp.watch(['./src/js/main.js'], ['js']);
+    gulp.watch(['./src/js/actions/**/*.js'], ['js-bundle']);
 });
 
 //Dev compilation with sourcemaps. It's needed for dev server
-gulp.task('dev', ['sass', 'js']);
+gulp.task('dev', ['sass', 'js-bundle']);
 
 
 //Production Compilation: minify and remove source maps
@@ -65,16 +66,17 @@ gulp.task('prod-sass', function () {
     .pipe(gulp.dest('./dist'))
 });
 
-gulp.task('prod-js', function () {
-    return gulp.src('./src/js/main.js')
-    .pipe(uglify())
+gulp.task('prod-js-bundle', function () {
+    return gulp.src('./src/js/actions/main.js')
+    .pipe(gulp_jspm({selfExecutingBundle: true, minify: true}))
     .pipe(gulp.dest('./dist'))
+    .pipe(connect.reload());
 });
 
-gulp.task('prod', ['prod-sass', 'prod-js'], function () {
+gulp.task('prod', ['prod-sass', 'prod-js-bundle'], function () {
     return gulp.src(['./css/*', '!./css/style.css'], {read: false})
     .pipe(clean(({force: true})));
 });
 
 //Default Task
-gulp.task('start', ['sass', 'js', 'connect', 'watch']);
+gulp.task('start', ['sass', 'js-bundle', 'connect', 'watch']);
