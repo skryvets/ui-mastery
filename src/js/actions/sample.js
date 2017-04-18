@@ -1,4 +1,4 @@
-export default function returnFive() {
-    return 5;
+export default function() {
+    return 5
 }
 
