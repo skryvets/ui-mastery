@@ -204,7 +204,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
 
     // Opera as of 12 on Windows needs word-spacing.
     // The ".opera-only" selector is used to prevent
-    // actual prefocus styling and is not required 
+    // actual prefocus styling and is not required
     // in markup.
     .opera-only :-o-prefocus,
     .gs-row--flex {
@@ -289,7 +289,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
     .gcm-full {
         width: 100%;
     }
-    
+
     @include grid-all(( $tablet-total-cols - 1 ), $tablet-total-cols, m);
 
     .gm-row--flex {
@@ -445,18 +445,18 @@ all of the grids also have a few "fuzzy" shortcuts as well:
 
 
     /*
-    
+
     Media Grid
-    
-    The Media Grid allows you to place a grid of photos or videos (catalog or 
-    retail products, etc.) without floating them, alleviating the need to concern 
-    yourself with clearing the floats with rows should an object extend further 
-    than another. Also, because they are not floating, it allows you to align 
+
+    The Media Grid allows you to place a grid of photos or videos (catalog or
+    retail products, etc.) without floating them, alleviating the need to concern
+    yourself with clearing the floats with rows should an object extend further
+    than another. Also, because they are not floating, it allows you to align
     the entire group center, making sure any "orphaned" grid entries are centered.
-    
+
     The syntax is simply the same as the regular responsive grid system, except
     the row class has a `--flex` modifier.
-    
+
     ````media-grid
     <ul class="gs-halves gm-thirds gl-quarters">
         <li>
@@ -499,7 +499,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
         </li>
     </ul>
     ````
-    
+
     */
 
     .gl-row--flex {
