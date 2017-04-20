@@ -2,9 +2,7 @@
   "name": "initui",
   "version": "0.2.0",
   "devDependencies": {
-    "babel-eslint": "^7.2.2",
     "eslint": "^3.19.0",
-    "eslint-plugin-jasmine": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
@@ -14,12 +12,7 @@
     "gulp-karma-runner": "^1.2.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.2.2",
-    "gulp-uglify": "^2.0.0",
-    "jasmine-core": "^2.5.2",
-    "karma": "^1.6.0",
-    "karma-jasmine": "^1.1.0",
-    "karma-jspm": "^2.2.3",
-    "karma-phantomjs-launcher": "^1.0.4"
+    "gulp-uglify": "^2.0.0"
   },
   "jspm": {
     "configFile": "jspm_config.js",
