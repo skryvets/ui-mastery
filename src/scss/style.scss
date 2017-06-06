@@ -1,22 +1,35 @@
-//Reset and Common Styles
-@import "common/_reset.scss";
-@import "common/_common.scss";
-
 //Config File
 @import "_config.scss";
 
 //Helper Classes
-@import "helpers/_vars.scss";
 @import "helpers/_media-query.scss";
 @import "helpers/_mixins.scss";
 @import "helpers/_helpers.scss";
 @import "helpers/_elements.scss";
 
+//Typography
+@import "_typography.scss";
+
+//Reset and Common Styles
+@import "common/_reset.scss";
+@import "common/_common.scss";
+
 //Grids
 @import "grid/table-grid/_table-grid.scss";
 @import "grid/motif-grid/_motif-grid.scss";
 
+//SVGs and icons
+@import "_icons.scss";
+
 //Components
 @import "components/_header.scss";
-@import "components/_page-body.scss";
+@import "components/_main.scss";
 @import "components/_footer.scss";
+
+//Templates
+@import "templates/_page1.scss";
+@import "templates/_page2.scss";
+@import "templates/_page3.scss";
+
+//Integrations
+@import "vendor/_some-vendor-styles.scss";

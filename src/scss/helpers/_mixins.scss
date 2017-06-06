@@ -54,12 +54,11 @@ a {
 }
 */
 
-@mixin transition($args...) {
-    -webkit-transition: $args;
-    -moz-transition: $args;
-    -ms-transition: $args;
-    -o-transition: $args;
-    transition: $args;
+@mixin transform($args...) {
+    -webkit-transform: $args;
+    -moz-transform: $args;
+    -o-transform: $args;
+    transform: $args;
 }
 /*
 .container-with-floated-children {
@@ -78,6 +77,10 @@ a {
     }
 }
 
+@mixin clearfix-simple {
+    overflow: hidden;
+}
+
 @mixin square($size){
     width: $size;
     height: $size;
@@ -86,4 +89,16 @@ a {
 @mixin absolute {
     position: absolute;
     content: " ";
+}
+
+@mixin image-responsive {
+    width: 100%;
+    height: auto;
+}
+
+@mixin stretch {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }

@@ -16,3 +16,7 @@
 .clearfix {
     @include clearfix;
 }
+
+.clearfix-simple {
+    @include clearfix-simple;
+}

@@ -17,21 +17,21 @@ Grid classes
 @include base-screens-max {
     .table-grid--padded {
         .table-col {
-            margin: 20px;
+            margin: $base-space;
         }
     }
 }
 
 .table-grid--example {
-    margin-bottom: 20px;
+    margin-bottom: $base-space;
     .table-col {
         text-align: center;
-        background: $cabaret;
-        padding: 20px;
+        background: #11346E;
+        padding: $base-space;
         color: #fff;
     }
     .table-col:nth-child(odd) {
-        background: $ruby;
+        background: #1DF18B;
     }
 }
 
@@ -43,7 +43,7 @@ Grid classes
     }
 
     .table-grid--padded {
-        border-spacing: 20px 0;
+        border-spacing: $base-space 0;
     }
 
     .table-grid--reverse {
