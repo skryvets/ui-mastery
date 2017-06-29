@@ -96,7 +96,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
     @include row( $mobile-margin );
 
     /* Pretty */
-    letter-spacing: -4px;
+    letter-spacing: -0.31em;
     text-rendering: optimizespeed;
 
     ul & {
@@ -138,7 +138,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
 // in markup.
 .opera-only :-o-prefocus,
 .g-thirds {
-    word-spacing: -6px;
+    word-spacing: -0.43em;
 }
 
 /**
@@ -208,7 +208,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
     // in markup.
     .opera-only :-o-prefocus,
     .gs-row--flex {
-        word-spacing: -6px;
+        word-spacing: -0.43em;
     }
 
     // Shortcuts/Aliases
@@ -302,7 +302,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
 
     .opera-only :-o-prefocus,
     .gm-row--flex {
-        word-spacing: -6px;
+        word-spacing: -0.43em;
     }
 
     // Shortcuts/Aliases
@@ -510,7 +510,7 @@ all of the grids also have a few "fuzzy" shortcuts as well:
     }
     .opera-only :-o-prefocus,
     .gl-row--flex {
-        word-spacing: -6px;
+        word-spacing: -0.43em;
     }
 
     // Shortcuts/Aliases
