@@ -76,7 +76,7 @@ There are three gulp task which are configured:
 
 Compiled versions of CSS/JS files could be found in the `dist` folder which is located in the root directory. 
 
-####Unit tests
+###Unit tests
 
 * `karma start` - runs karma server and file watcher.
 * `karma start --single-run` - runs karma server, performs unit tests and than closed.
