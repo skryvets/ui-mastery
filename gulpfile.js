@@ -4,15 +4,10 @@ var gulp = require('gulp');
 var connect = require('gulp-connect');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var gulp_jspm = require('gulp-jspm');
-var karma = require("gulp-karma-runner");
 var svgstore = require('gulp-svgstore');
 var inject = require('gulp-inject');
-
-gulp.task('default', function () {});
 
 //Init server and connect
 gulp.task('connect', function () {
@@ -97,4 +92,7 @@ gulp.task('prod', ['prod-sass', 'prod-js-bundle', 'svgstore'], function () {
 });
 
 //Default Task
+gulp.task('default', ['sass', 'js-bundle', 'svgstore', 'watch']);
+
+//Gulp Start
 gulp.task('start', ['sass', 'js-bundle', 'svgstore', 'connect', 'watch']);
