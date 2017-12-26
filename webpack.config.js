@@ -67,7 +67,7 @@ if (inProduction) {
         console.log("This is a hash", stats.hash);
 
         if (!stats.errors.length) {
-          var footerFileName = "./footer.php";
+          var footerFileName = "./index.html";
           var phpFile = fs.readFileSync(path.join(__dirname, footerFileName), "utf8");
 
           var phpOutput = phpFile.replace(
@@ -84,7 +84,7 @@ if (inProduction) {
       filename: function (getPath) {
         var hash = getPath('[hash]');
 
-        var headerFileName = "./header.php";
+        var headerFileName = "./index.html";
         var phpFile = fs.readFileSync(path.join(__dirname, headerFileName), "utf8");
 
         var phpOutput = phpFile.replace(

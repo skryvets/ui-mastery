@@ -68,7 +68,7 @@ Beforehand you need to install [Karma](https://www.npmjs.com/package/karma) glob
 There are two webpack task which are configured:
 
 * `npm start` - default task. Runs file watcher for sass, javascript and icon files. Works only with php/apache.
-* `npm build` - production build. Compiles JS/SCSS, minifies and removes sourcemaps.
+* `npm run build` - production build. Compiles JS/SCSS, minifies and removes sourcemaps. Adds hashes to CSS / javascript files in the index.html. For example: `main.bundle.js` becomes `main.bundle.ea9451556c63699f30dc.js`, where `ea9451556c63699f30dc` is a hash. Helps to break browser cache in a new release.
 
 Compiled versions of CSS/JS files could be found in the `dist` folder which is located in the root directory. 
 
