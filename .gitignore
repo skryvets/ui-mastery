@@ -3,3 +3,5 @@
 node_modules/
 jspm_packages/
 dist/
+.vscode/
+svg-sprite.svg

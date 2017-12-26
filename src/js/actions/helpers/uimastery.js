@@ -1,12 +1,12 @@
 export default function (selector) {
-  return new Initui(selector)
+  return new UIMastery(selector)
 }
 
-function Initui (selector) {
+function UIMastery (selector) {
   this.init(selector)
 }
 
-Initui.prototype.init = function (selector) {
+UIMastery.prototype.init = function (selector) {
   let re = /^#/
 
   if (selector instanceof HTMLElement) {
@@ -18,15 +18,15 @@ Initui.prototype.init = function (selector) {
   }
 }
 
-Initui.prototype.hasClass = function (value) {
-  if (this.elem.classList.contains(value)) {
+UIMastery.prototype.hasClass = function (value) {
+  if (this.elem[0].classList.contains(value)) {
     return true
   } else {
     return false
   }
 }
 
-Initui.prototype.addClass = function (value) {
+UIMastery.prototype.addClass = function (value) {
   if (Array.isArray(this.elem)) {
     for (let i = 0; i < this.elem.length; i++){
       this.elem[i].classList.add(value)
@@ -37,7 +37,7 @@ Initui.prototype.addClass = function (value) {
   return this
 }
 
-Initui.prototype.removeClass = function (value) {
+UIMastery.prototype.removeClass = function (value) {
   if (Array.isArray(this.elem)) {
     for (let i = 0; i < this.elem.length; i++){
       this.elem[i].classList.remove(value)
@@ -48,7 +48,7 @@ Initui.prototype.removeClass = function (value) {
   return this
 }
 
-Initui.prototype.toggleClass = function (value) {
+UIMastery.prototype.toggleClass = function (value) {
   if (Array.isArray(this.elem)) {
     for (let i = 0; i < this.elem.length; i++){
       this.elem[i].classList.toggle(value)
@@ -59,11 +59,11 @@ Initui.prototype.toggleClass = function (value) {
   return this
 }
 
-Initui.prototype.on = function (event, callback) {
+UIMastery.prototype.on = function (event, callback) {
   this.elem.addEventListener(event, callback)
 }
 
-Initui.prototype.isEmpty = function (obj) {
+UIMastery.prototype.isEmpty = function (obj) {
 
   // null and undefined are "empty"
   if (obj == null) return true
