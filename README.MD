@@ -58,14 +58,14 @@
 
 ### How to install
 
-Beforehand you need to install [Karma](https://www.npmjs.com/package/karma) and [Gulp](https://www.npmjs.com/package/gulp) globally. After that:
+Beforehand you need to install [Karma](https://www.npmjs.com/package/karma) globally (if you're planning to run and use unit test). After that:
 
 * Download or clone this repo.
 * Being in the folder run ```npm install``` in order to install gulp and its plugins
 
 ### How to use
 
-There are three gulp task which are configured:
+There are two webpack task which are configured:
 
 * `npm start` - default task. Runs file watcher for sass, javascript and icon files. Works only with php/apache.
 * `npm build` - production build. Compiles JS/SCSS, minifies and removes sourcemaps.
@@ -75,4 +75,4 @@ Compiled versions of CSS/JS files could be found in the `dist` folder which is l
 #### Unit tests
 
 * `karma start` - runs karma server and file watcher.
-* `karma start --single-run` - runs karma server, performs unit tests and than closed.
+* `npm test` or `karma start --single-run` - runs karma server, performs unit tests and than closed.
