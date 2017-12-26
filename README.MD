@@ -18,8 +18,11 @@
             |-- actions
                 |-- helpers
                 |-- vendor
+                |-- webpack
                 main.js
             |-- tests
+                |-- helpers
+                    uimastery.spec.js
                 sample.spec.js
         |-- scss
             |-- common
@@ -34,15 +37,11 @@
             _icons.scss
             _typography.scss
             style.scss
-    .eslintrc
-    .gitignore
-    gulpfile.js
+    .babelrc
     index.html
-    jspm_config.js
     karma.conf.js
     package.json
-    package-lock.json
-    README.MD
+    webpack.config.js
 ```
 
 ### Features of the packaged
@@ -63,16 +62,13 @@ Beforehand you need to install [Karma](https://www.npmjs.com/package/karma) and 
 
 * Download or clone this repo.
 * Being in the folder run ```npm install``` in order to install gulp and its plugins
-* After that do ```jspm init``` to install ES6 bundler JSPM
 
 ### How to use
 
 There are three gulp task which are configured:
 
-* `gulp` - default task. Runs file watcher for sass, javascript and icons
-* `gulp start` - the same as gulp, but also runs local development server which is available via address `http://localhost:8080/`. Server adds livereload which performs page refresh when html, sass, or javascript file was changed. Works only with html files. Livereload wouldn't work with php/apache.
-* `gulp dev` - just compiles JS and SCSS with sourcemaps. JS and SCSS wouln't be minified. Can be useful for dev purposes. This is "one-time" compilation (Without File Watcher).
-* `gulp prod` - production build. Compiles JS/SCSS, minifies and removes sourcemaps.
+* `npm start` - default task. Runs file watcher for sass, javascript and icon files. Works only with php/apache.
+* `npm build` - production build. Compiles JS/SCSS, minifies and removes sourcemaps.
 
 Compiled versions of CSS/JS files could be found in the `dist` folder which is located in the root directory. 
 
