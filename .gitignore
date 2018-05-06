@@ -4,4 +4,6 @@ node_modules/
 jspm_packages/
 dist/
 .vscode/
+sitemap.xml
+cachebuster.json
 svg-sprite.svg

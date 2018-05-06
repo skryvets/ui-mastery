@@ -1,3 +1,34 @@
+// Pixel equivalents
+$r1px: ( 1rem * (1 / 16) );
+$r2px: ( 1rem * (2 / 16) );
+$r3px: ( 1rem * (3 / 16) );
+$r4px: ( 1rem * (4 / 16) );
+$r5px: ( 1rem * (5 / 16) );
+$r6px: ( 1rem * (6 / 16) );
+$r7px: ( 1rem * (7 / 16) );
+$r8px: ( 1rem * (8 / 16) );
+$r9px: ( 1rem * (9 / 16) );
+$r10px: ( 1rem * (10 / 16) );
+$r20px: ( 1rem * (20 / 16) );
+$r30px: ( 1rem * (30 / 16) );
+$r40px: ( 1rem * (40 / 16) );
+$r50px: ( 1rem * (50 / 16) );
+$r60px: ( 1rem * (60 / 16) );
+$r70px: ( 1rem * (70 / 16) );
+$r80px: ( 1rem * (80 / 16) );
+$r90px: ( 1rem * (90 / 16) );
+$r100px: ( 1rem * (100 / 16) );
+$r200px: ( 1rem * (200 / 16) );
+$r300px: ( 1rem * (300 / 16) );
+$r400px: ( 1rem * (400 / 16) );
+$r500px: ( 1rem * (500 / 16) );
+$r600px: ( 1rem * (600 / 16) );
+$r700px: ( 1rem * (700 / 16) );
+$r800px: ( 1rem * (800 / 16) );
+$r900px: ( 1rem * (900 / 16) );
+$r1000px: ( 1rem * (1000 / 16) );
+
+
 // Grid Variables
 $base-column: 47px;
 $base-margin: 36px;
@@ -25,9 +56,3 @@ $base-space: 20px;
 $base-half-space: 30px;
 $double-space: 40px;
 $triple-space: 60px;
-
-//Primary color
-$primary-color: #1B998B;
-
-//Secondary color
-$secondary-color: #11346E ;
